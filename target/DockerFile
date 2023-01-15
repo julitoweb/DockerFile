@@ -1,0 +1,4 @@
+FROM amazoncorretto:11-alpine-jdk //de donde partimos
+MAINTAINER jccn // quien es el dueño
+COPY target/portfoliojcc-0.0.1-SNAPSHOT.jar jcc-app.jar                         //Copia el empaquetado a github
+ENTRYPOINT ["JAVA","-jar","/jcc-app.jar"]                    //esto se ejecuta primero
